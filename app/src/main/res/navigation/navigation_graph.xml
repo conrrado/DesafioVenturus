@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/catListFragment">
+
+    <fragment
+        android:id="@+id/catListFragment"
+        android:name="com.ccamacho.desafioventurus.view.CatListFragment"
+        android:label="@string/title_venturus_challenge"
+        tools:layout="@layout/fragment_cat_list" />
+</navigation>
