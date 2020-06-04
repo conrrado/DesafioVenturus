@@ -1,11 +1,11 @@
 package com.ccamacho.desafioventurus.model;
 
-public class CatImage {
+public class GalleryImage {
 
     private String id;
     private String link;
 
-    public CatImage(String id, String link) {
+    public GalleryImage(String id, String link) {
         this.id = id;
         this.link = link;
     }

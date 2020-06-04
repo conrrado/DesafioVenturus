@@ -4,20 +4,20 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Cat {
+public class GalleryData {
 
     private String id;
     private String title;
     private int views;
 
     @SerializedName("images")
-    private List<CatImage> catImageList;
+    private List<GalleryImage> galleryImageList;
 
-    public Cat(String id, String title, int views, List<CatImage> catImageList) {
+    public GalleryData(String id, String title, int views, List<GalleryImage> galleryImageList) {
         this.id = id;
         this.title = title;
         this.views = views;
-        this.catImageList = catImageList;
+        this.galleryImageList = galleryImageList;
     }
 
     public String getId() {
@@ -44,11 +44,11 @@ public class Cat {
         this.views = views;
     }
 
-    public List<CatImage> getCatImageList() {
-        return catImageList;
+    public List<GalleryImage> getGalleryImageList() {
+        return galleryImageList;
     }
 
-    public void setCatImageList(List<CatImage> catImageList) {
-        this.catImageList = catImageList;
+    public void setGalleryImageList(List<GalleryImage> galleryImageList) {
+        this.galleryImageList = galleryImageList;
     }
 }

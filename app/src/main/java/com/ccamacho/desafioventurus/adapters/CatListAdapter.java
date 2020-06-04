@@ -10,18 +10,23 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.ccamacho.desafioventurus.R;
-import com.ccamacho.desafioventurus.model.Cat;
+import com.ccamacho.desafioventurus.model.GalleryData;
 
 import java.util.List;
 
 public class CatListAdapter extends RecyclerView.Adapter<CatListAdapter.CatListViewHolder> {
 
-    List<Cat> catList;
+    List<GalleryData> galleryList;
 
-    public CatListAdapter(List<Cat> catList) {
-        this.catList = catList;
+    public CatListAdapter(List<GalleryData> galleryList) {
+        this.galleryList = galleryList;
+    }
+
+    public void updateList(List<GalleryData> galleryList) {
+        this.galleryList.clear();
+        this.galleryList.addAll(galleryList);
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -33,12 +38,12 @@ public class CatListAdapter extends RecyclerView.Adapter<CatListAdapter.CatListV
 
     @Override
     public void onBindViewHolder(@NonNull CatListViewHolder holder, int position) {
-        holder.bind(catList.get(position));
+        holder.bind(galleryList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return catList.size();
+        return galleryList.size();
     }
 
     static class CatListViewHolder extends RecyclerView.ViewHolder {
@@ -52,13 +57,13 @@ public class CatListAdapter extends RecyclerView.Adapter<CatListAdapter.CatListV
             textViewTitle = itemView.findViewById(R.id.textView_title);
         }
 
-        void bind(Cat cat) {
+        void bind(GalleryData gallery) {
             try {
-                String url = cat.getCatImageList().get(0).getLink();
+                String url = gallery.getGalleryImageList().get(0).getLink();
                 Glide.with(itemView.getContext())
                         .load(url)
                         .into(imageView);
-                textViewTitle.setText(cat.getTitle());
+                textViewTitle.setText(gallery.getTitle());
             } catch (Exception e) {
                 e.printStackTrace();
             }

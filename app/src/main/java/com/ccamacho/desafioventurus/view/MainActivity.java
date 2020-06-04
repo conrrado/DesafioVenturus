@@ -1,12 +1,12 @@
 package com.ccamacho.desafioventurus.view;
 
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.customview.widget.Openable;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
-
-import android.os.Bundle;
 
 import com.ccamacho.desafioventurus.R;
 
