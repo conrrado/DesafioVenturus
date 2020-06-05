@@ -9,9 +9,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.ccamacho.desafioventurus.R;
 import com.ccamacho.desafioventurus.model.GalleryData;
+import com.ccamacho.desafioventurus.util.ImageUtil;
 
 import java.util.List;
 
@@ -60,9 +60,7 @@ public class CatListAdapter extends RecyclerView.Adapter<CatListAdapter.CatListV
         void bind(GalleryData gallery) {
             try {
                 String url = gallery.getGalleryImageList().get(0).getLink();
-                Glide.with(itemView.getContext())
-                        .load(url)
-                        .into(imageView);
+                ImageUtil.setImageView(imageView, url);
                 textViewTitle.setText(gallery.getTitle());
             } catch (Exception e) {
                 e.printStackTrace();
