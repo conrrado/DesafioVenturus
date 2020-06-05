@@ -7,11 +7,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavDirections;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ccamacho.desafioventurus.R;
 import com.ccamacho.desafioventurus.model.GalleryData;
 import com.ccamacho.desafioventurus.util.ImageUtil;
+import com.ccamacho.desafioventurus.view.CatListFragmentDirections;
 
 import java.util.List;
 
@@ -62,6 +65,10 @@ public class CatListAdapter extends RecyclerView.Adapter<CatListAdapter.CatListV
                 String url = gallery.getGalleryImageList().get(0).getLink();
                 ImageUtil.setImageView(imageView, url);
                 textViewTitle.setText(gallery.getTitle());
+                itemView.setOnClickListener(view -> {
+                    NavDirections action = CatListFragmentDirections.actionToImageFragment(gallery);
+                    Navigation.findNavController(view).navigate(action);
+                });
             } catch (Exception e) {
                 e.printStackTrace();
             }

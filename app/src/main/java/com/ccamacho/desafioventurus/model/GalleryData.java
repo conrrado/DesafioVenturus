@@ -2,9 +2,10 @@ package com.ccamacho.desafioventurus.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class GalleryData {
+public class GalleryData implements Serializable {
 
     private String id;
     private String title;

@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Desafio Venturus</string>
     <string name="title_venturus_challenge">Desafio Venturus</string>
-    <string name="developer_by">Desenvolvido por Conrrado Camacho</string>
     <string name="title_information">Informações</string>
+    <string name="developer_by">Desenvolvido por Conrrado Camacho</string>
+    <string name="views">views</string>
 </resources>
