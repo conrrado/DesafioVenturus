@@ -39,6 +39,7 @@ public class InformationFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         binding.textViewAppName.setText(getString(R.string.app_name));
         binding.textViewAppVersion.setText(BuildConfig.VERSION_NAME);
+        binding.textViewAppDescription.setText(getString(R.string.app_description));
         binding.textViewDeveloperBy.setText(getString(R.string.developer_by));
     }
 }
