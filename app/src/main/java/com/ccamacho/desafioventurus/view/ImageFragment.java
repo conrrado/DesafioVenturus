@@ -41,7 +41,8 @@ public class ImageFragment extends Fragment {
         if (getArguments() != null) {
             try {
                 GalleryData galleryData = ImageFragmentArgs.fromBundle(getArguments()).getGalleryData();
-                ImageUtil.setImageView(binding.imageView, galleryData.getGalleryImageList().get(0).getLink());
+                String url = galleryData.getGalleryImageList().get(0).getLink();
+                ImageUtil.setImageView(binding.imageView, url);
                 binding.textViewTitle.setText(galleryData.getTitle());
                 binding.textViewViews.setText(String.valueOf(galleryData.getViews() + " " + getString(R.string.views)));
             } catch (Exception e) {

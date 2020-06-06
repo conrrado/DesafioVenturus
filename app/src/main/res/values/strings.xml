@@ -5,4 +5,5 @@
     <string name="developer_by">Desenvolvido por Conrrado Camacho</string>
     <string name="views">views</string>
     <string name="app_description">Aplicativo desenvolvido para o desafio técnico da Venturus.</string>
+    <string name="error_network">Verifique sua conexão com a internet e tente novamente.</string>
 </resources>

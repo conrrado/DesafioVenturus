@@ -25,6 +25,8 @@ import java.util.ArrayList;
 
 public class CatListFragment extends Fragment {
 
+    private static final String TAG = CatListFragment.class.getSimpleName();
+
     private FragmentCatListBinding binding;
     private CatListViewModel viewModel;
     private CatListAdapter adapter;
@@ -57,7 +59,7 @@ public class CatListFragment extends Fragment {
         binding.recyclerView.setHasFixedSize(true);
         binding.recyclerView.setAdapter(adapter);
 
-        viewModel.getCatGalleryList();
+        viewModel.getCatGalleryList(getContext());
         receiveGalleryList();
     }
 
@@ -85,4 +87,5 @@ public class CatListFragment extends Fragment {
         NavDirections action = CatListFragmentDirections.actionToInformationFragment();
         Navigation.findNavController(requireView()).navigate(action);
     }
+
 }

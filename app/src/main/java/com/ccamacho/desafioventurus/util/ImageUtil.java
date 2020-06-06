@@ -1,7 +1,6 @@
 package com.ccamacho.desafioventurus.util;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.widget.ImageView;
 
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
@@ -15,7 +14,6 @@ public class ImageUtil {
         CircularProgressDrawable progressDrawable = new CircularProgressDrawable(context);
         progressDrawable.setStrokeWidth(10f);
         progressDrawable.setCenterRadius(50f);
-        progressDrawable.setBackgroundColor(Color.WHITE);
         progressDrawable.start();
         return progressDrawable;
     }
@@ -27,7 +25,7 @@ public class ImageUtil {
     }
 
     public static void setImageViewWithProgress(ImageView image, String url) {
-                RequestOptions requestOptions = new RequestOptions()
+        RequestOptions requestOptions = new RequestOptions()
                 .placeholder(getProgressDrawable(image.getContext()))
                 .fitCenter();
         Glide.with(image.getContext())
