@@ -1,7 +1,7 @@
 # DesafioVenturus
 Desafio Técnico Venturus
 
-O app contém uma galeria de imagens e ao clicar na imagem da para ver no tamanho da tela.
+O app contém uma galeria de imagens de gatos e ao clicar na imagem da para ver no tamanho da tela.
 
 Tecnologias utilizadas:
 - dagger2
